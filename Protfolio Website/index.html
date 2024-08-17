@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PROTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+         <div class="container">
+            <nav>
+                <img src="images/Arpitha Omkar.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <i class="fa-solid fa-xmark"></i>
+                </ul>
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>Front End Developer</p>
+                <h1>Hello, I'm <span>Arpitha Omkar</span><br>from Bangalore</h1>
+            </div>
+         </div>  
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Designer.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tit">About Me</h1>
+                    <p>I Arpith Omkar, Currently pursuing My Masters in the field of computer Applications.<br>
+                       I graduated from tumkur university with CGPA of 8.8% in Computer Applications field.<br>
+                       I am very enthusiastic person and also good team player, I keep myself busy in learning new skills.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Educations</p>
+                    </div>
+                    <div class="tab-contents active-tabs" id="skills">
+                        <ul>
+                            <li><span>Programing languange</span><br>C, C++, Java</li>
+                            <li><span>Frontend Web Development</span><br>HTML,CSS,Javascript</li>
+                            <li><span>Testing Skills</span><br>Manual Testing, Automation Testing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jan 2024-Jul 2024</span><br>QA Intern at EFI India Pvt ltd</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Feb 2023 - Feb 2025</span><br>Master of Computer Applications</li>
+                            <li><span>2019-2022</span><br>Bachelors of Computer Applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-tit">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/e-learn.jpg">
+                <div class="layer">
+                    <h2>E-learn</h2>
+                    <p>This is an static web page where we will offer some course and the related vedios to it.</p>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/curfew-epass">
+                <div class="layer">
+                    <h2>Curfew e-pass</h2>
+                    <p>This is a dynamic web page where it is used to generate e-pass during the covid situation.</p>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/table.jpg">
+                <div class="layer">
+                    <h2>Resturant Table Management System</h2>
+                    <p>This is a web application where the customers can pre book there table before visiting the hotel itself.</p>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="Sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>arpitha@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>1234567809</p>
+                <div class="social-icons">
+                    <a href="linkedin.com/in/arpitha-o-6436a72b5| "><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/ArpithaOmkar"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/arpitha_freebird?igsh=ejkyZTVtMDRjcW90"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="images/Arpitha_resume.pdf" download class="btn btn2">Download Resume<i class="fa-solid fa-download"></i></a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright@ArpithaOmkar</p>
+    </div>
+</div>
+
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tabs");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tabs");
+    }
+</script>
+</body>
+</html>
